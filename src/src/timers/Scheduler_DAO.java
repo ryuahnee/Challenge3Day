@@ -21,6 +21,7 @@ public class Scheduler_DAO {
 	
 	// 자정에 데일리 인증을 완료하지 않은 회원의 챌린지 결과를 F로 업데이트
 	public int challstatusUpdate(){
+		  
 		
 		List<MypageDTO> list = new ArrayList<>();
 		String driver = "com.mysql.cj.jdbc.Driver";
