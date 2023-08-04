@@ -90,7 +90,7 @@
 	  <url-pattern>/qna/List.do</url-pattern>
 	  <url-pattern>/qna/Detail.do</url-pattern>
 	  <url-pattern>/qna/Delete.do</url-pattern>
-<!-- 	  <url-pattern>/qna/Modify.do</url-pattern> -->
+	  <url-pattern>/qna/Modify.do</url-pattern>
 	  <url-pattern>/qnaAn/Modifypage.do</url-pattern>
 	  <url-pattern>/qnaAn/Delete.do</url-pattern>
 	  <url-pattern>/qnaAn/Write.do</url-pattern>
