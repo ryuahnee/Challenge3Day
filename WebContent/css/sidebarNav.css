@@ -1,0 +1,196 @@
+  *, *:after, *:before {
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+}
+
+
+.navbar {
+  grid-area: header;
+  box-sizing: border-box;
+  padding: 15px 10%;
+  position: sticky;
+  top: 0;
+  height: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 3;
+  backdrop-filter: blur(6px);
+  flex-wrap: nowrap;  /* Prevent the buttons from wrapping onto a new line */
+  
+}
+
+
+.navbar-brand img {
+	  max-height: 65px;
+	  max-width: auto;
+}
+
+.navbar .nav-item {
+  margin-left: 5px; /* 버튼들 사이의 간격을 조정할 수 있습니다. */
+}
+
+i { margin: 0 7px; }
+
+/*네비게이션햄버거*/
+#sidebarCollapse {
+  color: #FC7C24;
+  background: transparent;
+  outline: none;
+  margin: 0 20px;
+}
+#sidebarCollapse:hover {
+  color: #fff;
+  background: #FC7C24;
+  outline: none;
+}
+.wrapper { 
+  display: flex;
+  text-decoration: none;
+  width: 100%;
+  align-items: stretch;
+} 
+ 
+
+#sidebar {
+    min-width: 350px;
+    max-width: 350px;
+    margin-top: 5rem; /* navbar가 끝나는 지점부터 시작하도록 수정 */
+    background: #ffeeda;
+    color: #000000;
+    transition: all 0.3s;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto; /* 스크롤 가능하도록 설정 */
+    
+}
+
+#sidebar .sidebar-header{
+	padding: 30px;
+	text-align: center;
+}
+
+#sidebar.active{
+	margin-left: -350px;
+	 /* bodyContent를 좌측으로 350px 이동시킴 */
+}
+
+
+#sidebar ul.components{
+	padding: 20px 0px;
+}
+
+#sidebar ul p{
+	padding: 10px;
+	font-size: 1.2em;
+	color: #000000;
+}
+
+
+#sidebar ul li a {
+  padding: 25px 50px; 
+  font-size: 1.2em;
+  display: block;
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none; /* 밑줄 없음 */
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #fc8b3950;
+    text-decoration: none;
+}
+/*사이드바 메뉴 클릭시*/
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #fc8b39;
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+/*드롭다운 사이드바 선택*/
+ul ul a{
+	font-size: 1.1em !important;
+	padding-left: 30px !important;
+	background: #fda96f30;
+}
+
+#challengeDropdown li {
+            text-align: center;
+        }
+#boardDropdown li {
+            text-align: center;
+        }
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+#bodyContent {
+    width: 90%;
+   /*	 padding: 20px 40px; /* 위, 오른쪽, 아래, 왼쪽 padding 값 */
+    min-height: calc(100vh - 5rem); /* Subtract the height of headBarCSS from the 100vh */
+    transition: all 0.3s;
+    padding-left:370px;
+    margin-top: 5rem; /* Set the top margin to the height of headBarCSS */
+    
+}
+
+#bodyContent.active {
+  margin-left: -200px;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@media (max-width:800px) {
+  #sidebar {
+    margin-left: -350px;}
+  #sidebar.active{
+	margin-left: 0px;
+  }
+  #sidebarCollapse span{
+	display: none;
+  }
+  .card {
+    width:100%;
+  }
+}
+
+@media (max-width:400px) {
+  #sidebar {
+    margin-top: -20px;
+  }
+  #logo {
+    display: none;
+  }
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    #bodyContent {
+        margin-left: -500px; /* 작은 화면에서는 navbar 높이만큼의 padding-top 추가 */
+    }
+    
+@media screen and (max-width: 990px) {
+  .navbar .navbar-brand {
+    margin-right: auto; /* navbar-brand를 오른쪽으로 이동하여 버튼들에 충분한 공간을 확보합니다. */
+  }
+
+  .navbar .nav-item {
+    flex: 0 0 auto; /* 버튼들이 가로로 정렬되도록 합니다. */
+  }
+}
+    
+}

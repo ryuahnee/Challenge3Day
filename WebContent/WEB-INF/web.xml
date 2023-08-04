@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>test2</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+
+<listener>
+    <listener-class>jdbc.DBCPInitListener</listener-class>
+</listener>
+  <context-param>
+    <param-name>poolConfig</param-name>
+    <param-value>
+    jdbcdriver=com.mysql.cj.jdbc.Driver
+   	jdbcUrl=jdbc:mysql://172.30.1.16:3307/challenge3?useUnicode=true&amp;characterEncoding=utf8&amp;serverTimezone=UTC
+   	dbUser=ryu
+   	dbPass=1234
+   	validationQuery=select 1
+   	minIdle=3
+   	maxTotal=30
+   	poolName=challenge3
+	</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>ControllerUsingURI</servlet-name>
+    <servlet-class>mvc.controller.ControllerUsingURI</servlet-class>
+    <init-param>
+      <param-name>configFile</param-name>
+      <param-value>/WEB-INF/commandController.properties</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+ 	<multipart-config>
+    <location>/upload</location>
+     <max-file-size>52428800</max-file-size>      		<!-- 50 MB in bytes -->
+    <max-request-size>262144000</max-request-size>   		<!-- 50 MB * 5 in bytes -->
+    <file-size-threshold>1048576</file-size-threshold>   
+	</multipart-config>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ControllerUsingURI</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <session-timeout>20</session-timeout>
+  </session-config>
+    <!-- POST요청시 한글 깨짐 방지 -->
+   <filter>
+        <filter-name>setCharacterEncodingFilter</filter-name>
+        <filter-class>org.apache.catalina.filters.SetCharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+        <async-supported>true</async-supported>
+    </filter>
+    
+      <!-- The mapping for the Set Character Encoding Filter -->
+    <filter-mapping>
+        <filter-name>setCharacterEncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+      <filter>
+ 		  <filter-name>LoginCheckFilter</filter-name>
+		  <filter-class>filter.LoginCheckFilter</filter-class>
+ 	  </filter>
+
+  <filter-mapping>
+	  <filter-name>LoginCheckFilter</filter-name>
+	  <url-pattern>/logout.do</url-pattern>
+	  <url-pattern>/member/list.do</url-pattern>
+	  <url-pattern>/member/detail.do</url-pattern>
+	  <url-pattern>/member/modify.do</url-pattern>
+	  <url-pattern>/member/delete.do</url-pattern>
+	  <url-pattern>/member/challList.do</url-pattern>
+	  <url-pattern>/member/challModify.do</url-pattern>
+	  <url-pattern>/member/challDelete.do</url-pattern>
+	  <url-pattern>/chall/challing.do</url-pattern>
+	  <url-pattern>/chall/write.do</url-pattern>
+	  <url-pattern>/chall/modify.do</url-pattern>
+	  <url-pattern>/chall/delete.do</url-pattern>
+	  <url-pattern>/myPage/list.do</url-pattern>
+	  <url-pattern>/myPage/stateUpdate.do</url-pattern>
+	  <url-pattern>/myPage/challengeopinion.do</url-pattern>
+	  <url-pattern>/qna/List.do</url-pattern>
+	  <url-pattern>/qna/Detail.do</url-pattern>
+	  <url-pattern>/qna/Delete.do</url-pattern>
+<!-- 	  <url-pattern>/qna/Modify.do</url-pattern> -->
+	  <url-pattern>/qnaAn/Modifypage.do</url-pattern>
+	  <url-pattern>/qnaAn/Delete.do</url-pattern>
+	  <url-pattern>/qnaAn/Write.do</url-pattern>
+	  <url-pattern>/qnaAn/Modify.do</url-pattern>
+	  <url-pattern>/qna/Write.do</url-pattern>
+	  <url-pattern>/qna/Read.do</url-pattern>
+	  <url-pattern>/notice/write.do</url-pattern>
+	  <url-pattern>/notice/modify.do</url-pattern>
+	  <url-pattern>/notice/delete.do</url-pattern>
+	  <url-pattern>/event/write.do</url-pattern>
+	  <url-pattern>/event/modify.do</url-pattern>
+	  <url-pattern>/event/delete.do</url-pattern>
+	  <url-pattern>/event/apply.do</url-pattern>
+	  <url-pattern>/event/memberlist.do</url-pattern>
+	  <url-pattern>/notice/write.do</url-pattern>
+	  <url-pattern>/notice/modify.do</url-pattern>
+	  <url-pattern>/notice/delete.do</url-pattern>
+	  
+  </filter-mapping>
+  
+</web-app>
