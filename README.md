@@ -1,4 +1,4 @@
-# MBTI SUPER 'TTTTT'들을 위한 미니멀 챌린지 '작심삼일'
+![image](https://github.com/ryuahnee/Challenge3Day/assets/135402890/addd4b2c-8a1c-4f87-b1be-bb28b8b6dd4d)# MBTI SUPER 'TTTTT'들을 위한 미니멀 챌린지 '작심삼일'
 
  <div align="center">
 <img width="418" alt="image" src="https://github.com/ryuahnee/Challenge3Day/assets/135402890/5405afb8-d87a-472c-8833-11b24dac8086">
@@ -22,13 +22,22 @@
 
 ## 🗓️  프로젝트 상세
 * 기간 : 2023.06.28 ~ 08.02
-
 * 인원 : 5명
-
 * 분류: JSP기반 MVC패턴 팀 프로젝트
 
-* 주요 기능: 문의사항/마이페이지, Email 전송, Java Quartz Scheduler구현
+* 언어 : Java(JDK 1.8), JSP, Javascrip, CSS3, MySQL
+* 서버 : Apache Tomcat 9.0
+* DB : MySQL 8.0
+* API & library : Scheduler API, Mail API
 
-* 사용 기술: Java(JDK 1.8), JSP, Javascrip, CSS, MySQL
+<br>
+
+## 💡 주요 역할 
+- 1:1 문의사항 / 마이페이지 / 챌린지인증 페이지 구현
+- Scheduler API를 이용 자동화 처리
+- 서비스 기획 및 방향 설정
+
+---
+
 
 
