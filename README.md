@@ -2,7 +2,7 @@
 
  <div align="center">
 <img width="418" alt="image" src="https://github.com/ryuahnee/Challenge3Day/assets/135402890/5405afb8-d87a-472c-8833-11b24dac8086">
-  <img width="481" alt="image" src="https://github.com/ryuahnee/Challenge3Day/assets/135402890/1590eb6f-7f97-4ebe-8709-85fc1a173816">
+  <img width="418" alt="image" src="https://github.com/ryuahnee/Challenge3Day/assets/135402890/1590eb6f-7f97-4ebe-8709-85fc1a173816">
 
  </div>
  
