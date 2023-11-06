@@ -25,7 +25,7 @@
 ## 🗓️  프로젝트 상세
 * 기간 : 2023.06.28 ~ 08.02
 * 인원 : 5명
-* 분류: JSP기반 MVC패턴 팀 프로젝트
+* 분류: JSP/Servlet기반 MVC패턴 팀 프로젝트
 
 * 언어 : Java(JDK 1.8), JSP, Javascrip, CSS3, MySQL
 * 서버 : Apache Tomcat 9.0
