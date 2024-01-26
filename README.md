@@ -1,4 +1,7 @@
+<div align="center">
+ 
 # MBTI SUPER 'TTTTT'들을 위한 미니멀 챌린지 '작심삼일'
+</div>
 
  <div align="center">
 <img width="455px" alt="image" src="https://github.com/ryuahnee/Challenge3Day/assets/135402890/19e5534e-4c74-4ec2-af46-43e67895dae5">
